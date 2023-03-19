@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html data-theme="emerald">
+  <head>
+    <title>HotwireForms</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+  </head>
+
+  <body>
+    <div class="container mx-auto">
+      <div class="py-8">
+        <div id="flash" class="flash">
+          <%= render partial: "shared/flash" %>
+        </div>
+        <%= yield %>
+      </div>
+    </div>
+  </body>
+</html>
